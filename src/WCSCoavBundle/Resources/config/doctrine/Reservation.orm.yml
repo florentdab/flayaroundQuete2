@@ -15,3 +15,12 @@ WCSCoavBundle\Entity\Reservation:
         nbSeats:
             type: integer
     lifecycleCallbacks: {  }
+
+    manyToMany:
+        passengers:
+            targetEntity: User
+            mappedBy: reservation
+
+    manyToOne:
+        flight:
+            targetEntity: WCSCoavBundle\Entity\Flight
